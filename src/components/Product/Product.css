@@ -1,0 +1,36 @@
+.card img {
+  width: 230px;
+  height: 230px;
+  border-radius: 8px;
+  margin: 7px;
+}
+
+.card {
+  border-radius: 8px;
+  border: 1px solid #95a0a7;
+  position: relative;
+}
+
+.card-details {
+  margin-left: 14px;
+}
+
+.card-details h6 {
+  margin: 0;
+}
+.card-details p {
+  margin: 10px 0px;
+}
+
+.btn-cart {
+  border-radius: 0px 0px 8px 8px;
+  border: 1px solid #95a0a7;
+  width: 100%;
+  background: #ffe0b3;
+  position: absolute;
+  bottom: 0;
+  margin-top: 10px;
+}
+.btn-cart:hover {
+  background-color: orange;
+}
