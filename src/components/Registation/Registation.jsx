@@ -1,10 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ContextUser } from '../../UserContext/UserContext';
 
 const Registation = () => {
   const [error, setError] = useState('');
-
+  const passRef1 = useRef();
+  const passRef2 = useRef();
   const { loginGoogle, createUser } = useContext(ContextUser);
   // handler form submision
   const handlerFormsubmit = e => {
@@ -39,6 +40,16 @@ const Registation = () => {
       })
       .catch(er => console.log(er.message));
   };
+  const handlerShowPass = e => {
+    const isChecked = e.target.checked;
+    if (isChecked) {
+      passRef1.current.type = 'text';
+      passRef2.current.type = 'text';
+    } else {
+      passRef1.current.type = 'password';
+      passRef2.current.type = 'password';
+    }
+  };
   return (
     <div className="form-container">
       <h4 className="title">Registation</h4>
@@ -49,12 +60,31 @@ const Registation = () => {
         </div>
         <div className="form-control">
           <label htmlFor="name">Password</label>
-          <input type="password" name="password" placeholder="Enter name" />
+          <input
+            ref={passRef1}
+            type="password"
+            name="password"
+            placeholder="Enter password"
+          />
         </div>
         <div className="form-control">
           <label htmlFor="confirm">Confirm Password</label>
-          <input type="password" name="confirm" placeholder="Retype password" />
+          <input
+            ref={passRef2}
+            type="password"
+            name="confirm"
+            placeholder="Retype password"
+          />
           <p className="error">{error}</p>
+        </div>
+        <div className="checkbox">
+          <input
+            onChange={handlerShowPass}
+            type="checkbox"
+            name="checkbox"
+            id="check"
+          />
+          <label htmlFor="check">Show Password</label>
         </div>
         <input className="submitBtn" type="submit" value="Register" />
       </form>

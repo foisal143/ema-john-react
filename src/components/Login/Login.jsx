@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import './Login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ContextUser } from '../../UserContext/UserContext';
 const Login = () => {
+  const passRef = useRef();
   const navigate = useNavigate();
   const location = useLocation();
   const form = location.state?.form?.pathname || '/';
@@ -31,6 +32,14 @@ const Login = () => {
       })
       .catch(er => console.log(er.message));
   };
+  const handlerShowPass = e => {
+    const isChecked = e.target.checked;
+    if (isChecked) {
+      passRef.current.type = 'text';
+    } else {
+      passRef.current.type = 'password';
+    }
+  };
   return (
     <div className="form-container">
       <h4 className="title">Login</h4>
@@ -41,7 +50,21 @@ const Login = () => {
         </div>
         <div className="form-control">
           <label htmlFor="password">Password</label>
-          <input type="password" name="password" placeholder="Enter password" />
+          <input
+            ref={passRef}
+            type="password"
+            name="password"
+            placeholder="Enter password"
+          />
+        </div>
+        <div className="checkbox">
+          <input
+            onChange={handlerShowPass}
+            type="checkbox"
+            name="checkbox"
+            id="check"
+          />
+          <label htmlFor="check">Show Password</label>
         </div>
         <input className="submitBtn" type="submit" value="Login" />
       </form>
