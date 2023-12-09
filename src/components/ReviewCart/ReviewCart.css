@@ -1,0 +1,42 @@
+.reviewCart {
+  border: 1px solid gainsboro;
+  width: 400px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  padding: 5px;
+}
+.reviewCart img {
+  width: 90px;
+  height: 90px;
+}
+.reviewDetails {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.reDetails {
+  width: 50%;
+  margin-left: 5px;
+}
+
+h5,
+p {
+  margin: 0;
+}
+
+span {
+  color: orange;
+}
+
+button {
+  background-color: rgb(241, 164, 164);
+  padding: 5px 7px;
+  border-radius: 50%;
+  color: rgb(237, 46, 46);
+}

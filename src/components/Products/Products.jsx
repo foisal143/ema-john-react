@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './Products.css';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import {
   addToDb,
   deleteShoppingCart,
@@ -50,7 +53,7 @@ const Products = () => {
       const rest = cart.filter(pd => pd.id !== copyProduct.id);
       newCart = [...rest, exist];
     }
-    console.log(newCart);
+
     setCart(newCart);
     addToDb(copyProduct.id);
   };
@@ -74,7 +77,13 @@ const Products = () => {
           ))}
       </div>
       <div className="summary-container">
-        <Cart cart={cart} handlerClearCart={handlerClearCart}></Cart>
+        <Cart cart={cart} handlerClearCart={handlerClearCart}>
+          <Link to="review">
+            <button className="checkoutBtn">
+              Review Order <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );

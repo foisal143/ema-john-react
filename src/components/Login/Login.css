@@ -1,0 +1,121 @@
+.form-container {
+  width: 500px;
+  height: fit-content;
+  border-radius: 8px;
+  border: 1px solid #95a0a7;
+  background: #fff;
+  margin: 40px auto;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  box-shadow: -10px 10px #ffe0b3;
+}
+.title {
+  color: #2a414f;
+  text-align: center;
+  font-family: Lato;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.088px;
+}
+
+.form-control {
+  margin-bottom: 40px;
+}
+.form-control label {
+  color: #2a414f;
+  display: block;
+  font-family: Lato;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.026px;
+}
+
+.form-control input {
+  width: 415px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #95a0a7;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.submitBtn {
+  width: 415px;
+  height: 55px;
+  flex-shrink: 0;
+  margin: 0 10px;
+  border: none;
+  transition: all 0.5s;
+  background-color: #ffe0b3;
+  color: #0e161a;
+  cursor: pointer;
+  font-family: Lato;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.032px;
+  border-radius: 5px;
+}
+
+.submitBtn:hover {
+  background-color: #f4b75b;
+}
+
+.link-text {
+  width: 415px;
+  text-align: center;
+  margin: 10px 0;
+}
+.line-field {
+  width: 415px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.line {
+  width: 40%;
+  height: 2px;
+  background-color: #95a0a7;
+}
+
+.googleLogin {
+  width: 415px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #95a0a7;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.googleLogin img {
+  width: 50px;
+  height: 50px;
+}
+
+.googleLogin p {
+  color: #2a414f;
+
+  /* Body 1 */
+  font-family: Lato;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.085px;
+}
+
+.error {
+  color: rgb(241, 63, 63);
+}

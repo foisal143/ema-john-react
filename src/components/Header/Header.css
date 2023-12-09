@@ -23,3 +23,15 @@
 .nav-list a:hover {
   color: orange;
 }
+
+.logout {
+  width: fit-content;
+  border-radius: 5px;
+  background-color: antiquewhite;
+  color: black;
+}
+
+.logOutParent {
+  display: flex;
+  gap: 10px;
+}
