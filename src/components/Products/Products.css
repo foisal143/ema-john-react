@@ -19,3 +19,23 @@
   position: sticky;
   top: 0;
 }
+
+.slected {
+  background-color: #ff99004d;
+}
+.pagination {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  gap: 5px;
+}
+.pagination button {
+  background-color: aliceblue;
+  border-radius: 5px;
+  color: black;
+}
+.text-center {
+  text-align: center;
+}

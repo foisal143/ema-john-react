@@ -12,7 +12,7 @@ const OrderReview = () => {
   const [cart, setCarts] = useState(carts);
 
   const handlerRemoveitem = id => {
-    const restCart = cart.filter(cart => cart.id !== id);
+    const restCart = cart.filter(cart => cart._id !== id);
     setCarts(restCart);
     removeFromDb(id);
   };
@@ -22,7 +22,7 @@ const OrderReview = () => {
       <div>
         {cart.map(product => (
           <ReviewCart
-            key={product.id}
+            key={product._id}
             product={product}
             handlerRemoveitem={handlerRemoveitem}
           ></ReviewCart>
